@@ -71,19 +71,19 @@
 				000000000000000000001007 /* GameOverView.swift */,
 				000000000000000000001009 /* GameView.swift */,
 				00000000000000000000100B /* MenuView.swift */
-			); name = UI; sourceTree = "<group>", path = "UI"; };
+			); name = UI; sourceTree = "<group>"; path = "UI"; };
 		000000000000000000001033 /* Game */ = {isa = PBXGroup; children = (
 				00000000000000000000100D /* FlappyEngine.swift */,
 				00000000000000000000100F /* FlappyRenderer.swift */,
 				000000000000000000001011 /* MusicManager.swift */
-			); name = Game; sourceTree = "<group>", path = "Game"; };
+			); name = Game; sourceTree = "<group>"; path = "Game"; };
 		000000000000000000001034 /* Ads */ = {isa = PBXGroup; children = (
 				000000000000000000001013 /* AdManager.swift */,
 				000000000000000000001015 /* AdBannerView.swift */
-			); name = Ads; sourceTree = "<group>", path = "Ads"; };
+			); name = Ads; sourceTree = "<group>"; path = "Ads"; };
 		000000000000000000001035 /* Characters */ = {isa = PBXGroup; children = (
 				000000000000000000001017 /* Roster.swift */
-			); name = Characters; sourceTree = "<group>", path = "Characters"; };
+			); name = Characters; sourceTree = "<group>"; path = "Characters"; };
 		000000000000000000001036 /* Sprites */ = {isa = PBXGroup; children = (
 				000000000000000000001019 /* felix.png */,
 				00000000000000000000101B /* popeye.png */,
@@ -94,10 +94,10 @@
 				000000000000000000001025 /* olive.png */,
 				000000000000000000001027 /* bosko.png */,
 				000000000000000000001029 /* pete.png */
-			); name = Sprites; sourceTree = "<group>", path = "Sprites"; };
+			); name = Sprites; sourceTree = "<group>"; path = "Sprites"; };
 		000000000000000000001037 /* Resources */ = {isa = PBXGroup; children = (
 				00000000000000000000102B /* clark_ragtime.mp3 */
-			); name = Resources; sourceTree = "<group>", path = "Resources"; };
+			); name = Resources; sourceTree = "<group>"; path = "Resources"; };
 		000000000000000000001038 /* RiverReel */ = {isa = PBXGroup; children = (
 				000000000000000000001001 /* RiverReelApp.swift */,
 				00000000000000000000102D /* Info.plist */,
@@ -107,14 +107,14 @@
 				000000000000000000001035 /* Characters */,
 				000000000000000000001036 /* Sprites */,
 				000000000000000000001037 /* Resources */
-			); name = RiverReel; sourceTree = "<group>", path = "RiverReel"; };
+			); name = RiverReel; sourceTree = "<group>"; path = "RiverReel"; };
 		000000000000000000001039 /* Products */ = {isa = PBXGroup; children = (
 				00000000000000000000102E /* RiverReel.app */
 			); name = Products; sourceTree = "<group>"; };
-		00000000000000000000103A /* None */ = {isa = PBXGroup; children = (
+		00000000000000000000103A /* RiverReel */ = {isa = PBXGroup; children = (
 				000000000000000000001038 /* RiverReel */,
 				000000000000000000001039 /* Products */
-			); sourceTree = "<group>"; };
+			); name = RiverReel; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
