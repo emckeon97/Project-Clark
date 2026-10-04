@@ -9,7 +9,7 @@ struct RiverReelApp: App {
             ContentView()
                 .preferredColorScheme(.dark)
         }
-        .onChange(of: scenePhase) { phase in
+        .onChange(of: scenePhase) { _, phase in
             switch phase {
             case .background:
                 MusicManager.shared.pause()
