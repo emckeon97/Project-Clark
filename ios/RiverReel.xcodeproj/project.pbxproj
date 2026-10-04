@@ -1,0 +1,239 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000001002 /* RiverReelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001001 /* RiverReelApp.swift */; };
+		000000000000000000001004 /* ClarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001003 /* ClarkTheme.swift */; };
+		000000000000000000001006 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001005 /* ContentView.swift */; };
+		000000000000000000001008 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001007 /* GameOverView.swift */; };
+		00000000000000000000100A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001009 /* GameView.swift */; };
+		00000000000000000000100C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100B /* MenuView.swift */; };
+		00000000000000000000100E /* FlappyEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100D /* FlappyEngine.swift */; };
+		000000000000000000001010 /* FlappyRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100F /* FlappyRenderer.swift */; };
+		000000000000000000001012 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001011 /* MusicManager.swift */; };
+		000000000000000000001014 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001013 /* AdManager.swift */; };
+		000000000000000000001016 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001015 /* AdBannerView.swift */; };
+		000000000000000000001018 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001017 /* Roster.swift */; };
+		00000000000000000000101A /* felix.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001019 /* felix.png */; };
+		00000000000000000000101C /* popeye.png in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101B /* popeye.png */; };
+		00000000000000000000101E /* oswald.png in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101D /* oswald.png */; };
+		000000000000000000001020 /* koko.png in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101F /* koko.png */; };
+		000000000000000000001022 /* bimbo.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001021 /* bimbo.png */; };
+		000000000000000000001024 /* pooh.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001023 /* pooh.png */; };
+		000000000000000000001026 /* olive.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001025 /* olive.png */; };
+		000000000000000000001028 /* bosko.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001027 /* bosko.png */; };
+		00000000000000000000102A /* pete.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001029 /* pete.png */; };
+		00000000000000000000102C /* clark_ragtime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102B /* clark_ragtime.mp3 */; };
+		000000000000000000001031 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000001030 /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000001001 /* RiverReelApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "RiverReelApp.swift"; sourceTree = "<group>"; };
+		000000000000000000001003 /* ClarkTheme.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "ClarkTheme.swift"; sourceTree = "<group>"; };
+		000000000000000000001005 /* ContentView.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		000000000000000000001007 /* GameOverView.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "GameOverView.swift"; sourceTree = "<group>"; };
+		000000000000000000001009 /* GameView.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "GameView.swift"; sourceTree = "<group>"; };
+		00000000000000000000100B /* MenuView.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MenuView.swift"; sourceTree = "<group>"; };
+		00000000000000000000100D /* FlappyEngine.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "FlappyEngine.swift"; sourceTree = "<group>"; };
+		00000000000000000000100F /* FlappyRenderer.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "FlappyRenderer.swift"; sourceTree = "<group>"; };
+		000000000000000000001011 /* MusicManager.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MusicManager.swift"; sourceTree = "<group>"; };
+		000000000000000000001013 /* AdManager.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "AdManager.swift"; sourceTree = "<group>"; };
+		000000000000000000001015 /* AdBannerView.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "AdBannerView.swift"; sourceTree = "<group>"; };
+		000000000000000000001017 /* Roster.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Roster.swift"; sourceTree = "<group>"; };
+		000000000000000000001019 /* felix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "felix.png"; sourceTree = "<group>"; };
+		00000000000000000000101B /* popeye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popeye.png"; sourceTree = "<group>"; };
+		00000000000000000000101D /* oswald.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oswald.png"; sourceTree = "<group>"; };
+		00000000000000000000101F /* koko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "koko.png"; sourceTree = "<group>"; };
+		000000000000000000001021 /* bimbo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bimbo.png"; sourceTree = "<group>"; };
+		000000000000000000001023 /* pooh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pooh.png"; sourceTree = "<group>"; };
+		000000000000000000001025 /* olive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "olive.png"; sourceTree = "<group>"; };
+		000000000000000000001027 /* bosko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bosko.png"; sourceTree = "<group>"; };
+		000000000000000000001029 /* pete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pete.png"; sourceTree = "<group>"; };
+		00000000000000000000102B /* clark_ragtime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clark_ragtime.mp3"; sourceTree = "<group>"; };
+		00000000000000000000102D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		00000000000000000000102E /* RiverReel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "RiverReel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00000000000000000000103C /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (
+				000000000000000000001031 /* GoogleMobileAds in Frameworks */,
+			); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000001032 /* UI */ = {isa = PBXGroup; children = (
+				000000000000000000001003 /* ClarkTheme.swift */,
+				000000000000000000001005 /* ContentView.swift */,
+				000000000000000000001007 /* GameOverView.swift */,
+				000000000000000000001009 /* GameView.swift */,
+				00000000000000000000100B /* MenuView.swift */
+			); name = UI; sourceTree = "<group>", path = "UI"; };
+		000000000000000000001033 /* Game */ = {isa = PBXGroup; children = (
+				00000000000000000000100D /* FlappyEngine.swift */,
+				00000000000000000000100F /* FlappyRenderer.swift */,
+				000000000000000000001011 /* MusicManager.swift */
+			); name = Game; sourceTree = "<group>", path = "Game"; };
+		000000000000000000001034 /* Ads */ = {isa = PBXGroup; children = (
+				000000000000000000001013 /* AdManager.swift */,
+				000000000000000000001015 /* AdBannerView.swift */
+			); name = Ads; sourceTree = "<group>", path = "Ads"; };
+		000000000000000000001035 /* Characters */ = {isa = PBXGroup; children = (
+				000000000000000000001017 /* Roster.swift */
+			); name = Characters; sourceTree = "<group>", path = "Characters"; };
+		000000000000000000001036 /* Sprites */ = {isa = PBXGroup; children = (
+				000000000000000000001019 /* felix.png */,
+				00000000000000000000101B /* popeye.png */,
+				00000000000000000000101D /* oswald.png */,
+				00000000000000000000101F /* koko.png */,
+				000000000000000000001021 /* bimbo.png */,
+				000000000000000000001023 /* pooh.png */,
+				000000000000000000001025 /* olive.png */,
+				000000000000000000001027 /* bosko.png */,
+				000000000000000000001029 /* pete.png */
+			); name = Sprites; sourceTree = "<group>", path = "Sprites"; };
+		000000000000000000001037 /* Resources */ = {isa = PBXGroup; children = (
+				00000000000000000000102B /* clark_ragtime.mp3 */
+			); name = Resources; sourceTree = "<group>", path = "Resources"; };
+		000000000000000000001038 /* RiverReel */ = {isa = PBXGroup; children = (
+				000000000000000000001001 /* RiverReelApp.swift */,
+				00000000000000000000102D /* Info.plist */,
+				000000000000000000001032 /* UI */,
+				000000000000000000001033 /* Game */,
+				000000000000000000001034 /* Ads */,
+				000000000000000000001035 /* Characters */,
+				000000000000000000001036 /* Sprites */,
+				000000000000000000001037 /* Resources */
+			); name = RiverReel; sourceTree = "<group>", path = "RiverReel"; };
+		000000000000000000001039 /* Products */ = {isa = PBXGroup; children = (
+				00000000000000000000102E /* RiverReel.app */
+			); name = Products; sourceTree = "<group>"; };
+		00000000000000000000103A /* None */ = {isa = PBXGroup; children = (
+				000000000000000000001038 /* RiverReel */,
+				000000000000000000001039 /* Products */
+			); sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00000000000000000000103E /* RiverReel */ = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000001040 /* Build configuration list for PBXNativeTarget "RiverReel" */; buildPhases = (
+				00000000000000000000103B /* Sources */,
+				00000000000000000000103C /* Frameworks */,
+				00000000000000000000103D /* Resources */,
+			); buildRules = (
+			); dependencies = (
+			); name = RiverReel; packageProductDependencies = (
+				000000000000000000001030 /* GoogleMobileAds */,
+			); productName = RiverReel; productReference = 00000000000000000000102E /* RiverReel.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000001045 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; }; buildConfigurationList = 00000000000000000000103F /* Build configuration list for PBXProject "RiverReel" */; compatibilityVersion = "Xcode 16.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en); mainGroup = 00000000000000000000103A; packageReferences = (
+				00000000000000000000102F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			); productRefGroup = 000000000000000000001039 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (
+				00000000000000000000103E /* RiverReel */,
+			); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00000000000000000000103D /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
+				00000000000000000000101A /* felix.png in Resources */,
+				00000000000000000000101C /* popeye.png in Resources */,
+				00000000000000000000101E /* oswald.png in Resources */,
+				000000000000000000001020 /* koko.png in Resources */,
+				000000000000000000001022 /* bimbo.png in Resources */,
+				000000000000000000001024 /* pooh.png in Resources */,
+				000000000000000000001026 /* olive.png in Resources */,
+				000000000000000000001028 /* bosko.png in Resources */,
+				00000000000000000000102A /* pete.png in Resources */,
+				00000000000000000000102C /* clark_ragtime.mp3 in Resources */
+			); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00000000000000000000103B /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				000000000000000000001002 /* RiverReelApp.swift in Sources */,
+				000000000000000000001004 /* ClarkTheme.swift in Sources */,
+				000000000000000000001006 /* ContentView.swift in Sources */,
+				000000000000000000001008 /* GameOverView.swift in Sources */,
+				00000000000000000000100A /* GameView.swift in Sources */,
+				00000000000000000000100C /* MenuView.swift in Sources */,
+				00000000000000000000100E /* FlappyEngine.swift in Sources */,
+				000000000000000000001010 /* FlappyRenderer.swift in Sources */,
+				000000000000000000001012 /* MusicManager.swift in Sources */,
+				000000000000000000001014 /* AdManager.swift in Sources */,
+				000000000000000000001016 /* AdBannerView.swift in Sources */,
+				000000000000000000001018 /* Roster.swift in Sources */
+			); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000001041 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+			}; name = Debug; };
+		000000000000000000001042 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			}; name = Release; };
+		000000000000000000001043 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RiverReel/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emckeon97.RiverReel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = -Onone;
+			}; name = Debug; };
+		000000000000000000001044 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RiverReel/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emckeon97.RiverReel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00000000000000000000103F /* Build configuration list for PBXProject "RiverReel" */ = {isa = XCConfigurationList; buildConfigurations = (
+				000000000000000000001041 /* Debug */,
+				000000000000000000001042 /* Release */,
+			); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000001040 /* Build configuration list for PBXNativeTarget "RiverReel" */ = {isa = XCConfigurationList; buildConfigurations = (
+				000000000000000000001043 /* Debug */,
+				000000000000000000001044 /* Release */,
+			); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00000000000000000000102F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads"; requirement = {kind = upToNextMajorVersion; minimumVersion = 13.0.0; }; };
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		000000000000000000001030 /* GoogleMobileAds */ = {isa = XCSwiftPackageProductDependency; package = 00000000000000000000102F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */; productName = GoogleMobileAds; };
+/* End XCSwiftPackageProductDependency section */
+
+	};
+	rootObject = 000000000000000000001045 /* Project object */;
+}
