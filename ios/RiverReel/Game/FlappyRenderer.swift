@@ -111,26 +111,26 @@ enum FlappyRenderer {
         let by = engine.birdY
         let birdPx: CGFloat = 64
         let pulse = 1 + 0.13 * exp(-engine.flapT * 7)
-        gc.saveGState()
-        gc.translateBy(x: bx, y: by)
-        gc.rotate(by: .degrees(engine.rotation))
-        gc.scaleBy(x: pulse, y: pulse)
-        if let sprite {
-            let iw = sprite.size.width
-            let ih = sprite.size.height
-            let dh = birdPx
-            let dw = birdPx * iw / ih
-            gc.draw(Image(uiImage: sprite),
-                    in: CGRect(x: -dw / 2, y: -dh / 2, width: dw, height: dh))
-        } else {
-            // fallback round bird
-            gc.fill(Path(ellipseIn: CGRect(x: -birdPx * 0.42, y: -birdPx * 0.42,
-                                            width: birdPx * 0.84, height: birdPx * 0.84)),
-                    with: .color(Color(red: 0xF2/255, green: 0xEB/255, blue: 0xD8/255)))
-            gc.fill(Path(ellipseIn: CGRect(x: 4, y: -10, width: 8, height: 8)),
-                    with: .color(.black))
+        gc.drawLayer { layer in
+            layer.translateBy(x: bx, y: by)
+            layer.rotate(by: .degrees(engine.rotation))
+            layer.scaleBy(x: pulse, y: pulse)
+            if let sprite {
+                let iw = sprite.size.width
+                let ih = sprite.size.height
+                let dh = birdPx
+                let dw = birdPx * iw / ih
+                layer.draw(Image(uiImage: sprite),
+                           in: CGRect(x: -dw / 2, y: -dh / 2, width: dw, height: dh))
+            } else {
+                // fallback round bird
+                layer.fill(Path(ellipseIn: CGRect(x: -birdPx * 0.42, y: -birdPx * 0.42,
+                                                 width: birdPx * 0.84, height: birdPx * 0.84)),
+                           with: .color(Color(red: 0xF2/255, green: 0xEB/255, blue: 0xD8/255)))
+                layer.fill(Path(ellipseIn: CGRect(x: 4, y: -10, width: 8, height: 8)),
+                           with: .color(.black))
+            }
         }
-        gc.restoreGState()
 
         // ---- score ----
         let scoreText = Text("\(engine.score)")
