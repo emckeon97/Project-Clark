@@ -47,6 +47,19 @@ final class FlappyEngine: ObservableObject {
     var groundY: CGFloat { screenH - groundH }
     let birdR: CGFloat = 26
 
+    /// Seconds since run start — drives twinkle/blink in the renderer.
+    /// (Plain var: the @Published `frame` bump below is what redraws.)
+    var tSec: CGFloat = 0
+
+    private var loopTimer: Timer?
+    private var lastTick = Date()
+
+    deinit {
+        // Backstop: if onDisappear was ever missed, the timer dies here —
+        // it can never outlive the engine (and pile up across retries).
+        loopTimer?.invalidate()
+    }
+
     private var speed: CGFloat { min(Self.speedMax, Self.speedStart + CGFloat(score) * 3.5) }
     private func gapFor(_ s: Int) -> CGFloat { max(Self.gapMin, Self.gapStart - CGFloat(s) * 1.2) }
 
@@ -56,7 +69,7 @@ final class FlappyEngine: ObservableObject {
         screenW = w; screenH = h
         birdX = w * 0.30
         birdY = h * 0.42
-        vy = 0; rotation = 0; flapT = 99
+        vy = 0; rotation = 0; flapT = 99; tSec = 0
         started = false; gameOver = false; deadT = 0
         score = 0
         stacks = []
@@ -85,6 +98,40 @@ final class FlappyEngine: ObservableObject {
         started = true
         vy = Self.flapVY
         flapT = 0
+    }
+
+    // MARK: - Game loop
+
+    /// Starts the 60fps loop. Owned by the engine (a class), started from the
+    /// view's onAppear and stopped in onDisappear — plus a deinit backstop —
+    /// so the tick can never outlive its game screen.
+    ///
+    /// The game-over navigation is scheduled on the dispatch queue, NOT gated
+    /// on frame ticks: even if the loop ever stalls mid-tumble, THE END still
+    /// appears instead of freezing on the dead bird.
+    func startLoop(sizeProvider: @escaping () -> CGSize, onGameOver: @escaping (Int) -> Void) {
+        stopLoop()
+        lastTick = Date()
+        var overFired = false
+        loopTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 60.0, repeats: true) { [weak self] _ in
+            guard let self else { return }
+            let now = Date()
+            let dt = min(0.05, now.timeIntervalSince(self.lastTick))
+            self.lastTick = now
+            self.tSec += dt
+            self.update(dt: dt, size: sizeProvider())
+            if self.gameOver && !overFired {
+                overFired = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                    onGameOver(self.score)
+                }
+            }
+        }
+    }
+
+    func stopLoop() {
+        loopTimer?.invalidate()
+        loopTimer = nil
     }
 
     // MARK: - Simulation
