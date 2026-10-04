@@ -158,6 +158,7 @@
 				000000000000000000001030 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			); productRefGroup = 00000000000000000000103A /* Products */; projectDirPath = ""; projectRoot = ""; targets = (
 				00000000000000000000103F /* RiverReel */,
+				000000000000000000001059 /* RiverReelMac */,
 			); };
 /* End PBXProject section */
 
@@ -310,6 +311,10 @@
 		00000000000000000000105E /* Build configuration list for PBXNativeTarget "RiverReel" */ = {isa = XCConfigurationList; buildConfigurations = (
 				000000000000000000001061 /* Debug */,
 				000000000000000000001062 /* Release */,
+			); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		00000000000000000000105A /* Build configuration list for PBXNativeTarget "RiverReelMac" */ = {isa = XCConfigurationList; buildConfigurations = (
+				00000000000000000000105B /* Debug */,
+				00000000000000000000105C /* Release */,
 			); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 /* End XCConfigurationList section */
 
