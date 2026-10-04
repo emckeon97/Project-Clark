@@ -13,10 +13,17 @@
 //  The AdMob APP ID (ca-app-pub-3940256099942544~1458002511 for tests)
 //  belongs in Info.plist under the GADApplicationIdentifier key — not here.
 //
+//  Mac Catalyst: Google Mobile Ads has no Catalyst slice, so the SDK is only
+//  linked to the iOS target and every SDK reference below is behind
+//  #if !targetEnvironment(macCatalyst) — on Mac the class compiles to no-ops.
+//
 
 import Combine
 import UIKit
+
+#if !targetEnvironment(macCatalyst)
 import GoogleMobileAds
+#endif
 
 final class AdManager: NSObject, ObservableObject {
 
@@ -44,26 +51,36 @@ final class AdManager: NSObject, ObservableObject {
     private var gameOverCount = 0
     private var lastInterstitialShownAt: Date?
 
+    #if !targetEnvironment(macCatalyst)
     private var interstitialAd: InterstitialAd?
+    #endif
 
     override init() {
         super.init()
+        #if !targetEnvironment(macCatalyst)
         MobileAds.shared.start()
         loadInterstitial()
+        #endif
     }
 
     // MARK: - Banner
 
     /// Returns a view controller hosting a 320x50 banner that loads on appear.
+    /// On Catalyst this is a plain empty view controller (no ad SDK on Mac).
     func makeBanner() -> UIViewController {
+        #if !targetEnvironment(macCatalyst)
         let vc = AdBannerViewController()
         vc.adUnitID = Self.bannerID
         return vc
+        #else
+        return UIViewController()
+        #endif
     }
 
     // MARK: - Interstitial
 
     func loadInterstitial() {
+        #if !targetEnvironment(macCatalyst)
         let id = Self.interstitialID
         guard !id.isEmpty else { return }
         InterstitialAd.load(with: id, request: Request()) { [weak self] ad, error in
@@ -78,12 +95,15 @@ final class AdManager: NSObject, ObservableObject {
                 }
             }
         }
+        #endif
     }
 
     /// Presents the interstitial if one is loaded and the 60-second cooldown
     /// has elapsed since the last presentation. Returns true if presented.
+    /// Always false on Catalyst.
     @discardableResult
     func showInterstitial(from rootViewController: UIViewController) -> Bool {
+        #if !targetEnvironment(macCatalyst)
         if let last = lastInterstitialShownAt,
            Date().timeIntervalSince(last) < 60 {
             return false
@@ -94,12 +114,17 @@ final class AdManager: NSObject, ObservableObject {
         isInterstitialReady = false
         ad.present(from: rootViewController)
         return true
+        #else
+        return false
+        #endif
     }
 
     /// Call on every game over. Shows an interstitial on every 5th game over
     /// (subject to the 60-second cooldown) and keeps the next one preloading
     /// otherwise. Finds the presenting view controller internally.
+    /// No-op on Catalyst.
     func gameOverOccurred() {
+        #if !targetEnvironment(macCatalyst)
         gameOverCount += 1
         guard gameOverCount % 5 == 0 else {
             if interstitialAd == nil { loadInterstitial() }
@@ -110,6 +135,7 @@ final class AdManager: NSObject, ObservableObject {
         } else {
             loadInterstitial()
         }
+        #endif
     }
 
     // MARK: - Helpers
@@ -125,6 +151,7 @@ final class AdManager: NSObject, ObservableObject {
     }
 }
 
+#if !targetEnvironment(macCatalyst)
 // MARK: - FullScreenContentDelegate
 
 extension AdManager: FullScreenContentDelegate {
@@ -160,3 +187,4 @@ final class AdBannerViewController: UIViewController {
         banner.load(Request())
     }
 }
+#endif
