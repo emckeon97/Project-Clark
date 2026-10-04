@@ -48,7 +48,9 @@ class FlappyEngine {
         deadT = 0f
         score = 0
         stacks.clear()
-        var x = w + 80f
+        // First pillar starts on-screen (not off the right edge) so the
+        // opening isn't a long empty flight — about 0.45·w from the bird.
+        var x = w * 0.75f
         while (x < w + SPACING * 3) {
             stacks.add(newStack(x))
             x += SPACING
