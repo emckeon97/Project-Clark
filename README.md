@@ -35,8 +35,15 @@ Binary assets can't ride the git push, so they live in
 
 ## Build
 
-Open in Android Studio and run `assembleDebug` (same toolchain recipe as the
-Project Delta Android port: AGP 9.4.1 + Gradle 9.6.0 + Kotlin 2.4.20).
+Android: open in Android Studio and run `assembleDebug` (same toolchain
+recipe as the Project Delta Android port: AGP 9.4.1 + Gradle 9.6.0 +
+Kotlin 2.4.20).
+
+iOS: open `ios/RiverReel.xcodeproj` in Xcode (sources under `ios/RiverReel/`).
+SwiftUI port of the same game — same tuning, same marquee UI, same ad
+pacing. Binary assets for iOS live in `ios/RiverReel/Sprites/` (9 PNGs) and
+`ios/RiverReel/Resources/clark_ragtime.mp3` on the dev machine (they can't
+ride the git push). Pick your signing team in Xcode before running.
 
 ## Ads
 
