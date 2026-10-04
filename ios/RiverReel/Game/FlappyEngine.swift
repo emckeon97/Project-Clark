@@ -60,7 +60,9 @@ final class FlappyEngine: ObservableObject {
         started = false; gameOver = false; deadT = 0
         score = 0
         stacks = []
-        var x = w + 80
+        // First pillar starts on-screen (not off the right edge) so the
+        // opening isn't a long empty flight — about 0.45·w from the bird.
+        var x = w * 0.75
         while x < w + Self.spacing * 3 {
             stacks.append(newStack(x: x))
             x += Self.spacing
