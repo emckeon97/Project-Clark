@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 22
+  productGUID: 9f3a1c7e2b5d4a6f8c1e3b7d9a2f4c6e
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+  AndroidEnableSustainedPerformanceMode: 0
+  defaultScreenWidth: 540
+  defaultScreenHeight: 960
+  defaultScreenWidthWeb: 540
+  defaultScreenHeightWeb: 960
+  m_ScreenOrientation: 1
+  m_TargetDevice: 2
+  m_UseOSAutorotation: 0
+  m_AllowAutorotateToPortrait: 1
+  m_AllowAutorotateToPortraitUpsideDown: 0
+  m_AllowAutorotateToLandscapeRight: 0
+  m_AllowAutorotateToLandscapeLeft: 0
+  m_Use32BitDisplayBuffer: 1
+  m_DisableDepthAndStencilBuffers: 0
+  m_AllowFullscreenSwitch: 1
+  m_UseFlipModelSwapchain: 1
+  m_ResizableWindow: 1
+  m_BorderlessFullscreen: 0
+  m_ForceSingleInstance: 0
+  m_SupportedAspectRatios:
+    4:3: 1
+    5:4: 1
+    16:10: 1
+    16:9: 1
+    Others: 1
+  m_BundleVersion: 1.0.0
+  m_BuildTargetIcons: []
+  m_BuildTargetPlatformIcons: []
+  m_ProductName: River Reel
+  m_CompanyName: emckeon97
+  m_DisplayName:
+  m_Description:
+  m_Copyright:
+  m_SupportedScriptingBackends:
+    Windows: 0
+  m_ScriptingDefineSymbols: {}
+  m_ApiCompatibilityLevelPerPlatform:
+    Windows: 2
+  m_ActiveColorSpace: 0
+  m_MTRendering: 1
+  m_MobileMTRendering: 1
+  m_StackTraceTypes: 1
+  bakeCollisionMeshes: 0
+  m_SpritePackerPolicy: 0
+  m_UseOnDemandRendering: 0
+  m_RenderingPath: 0
+  m_MobileRenderingPath: 0
+  m_StereoRenderingPath: 0
+  m_VirtualRealitySupported: 0
+  m_AndroidSupportedAspectRatio: 1
+  m_IOSUseCustomAppBackgroundBehavior: 0
