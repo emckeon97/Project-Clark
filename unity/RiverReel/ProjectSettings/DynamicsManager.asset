@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!55 &1
+DynamicsManager:
+  m_ObjectHideFlags: 0
+  m_SerializedVersion: 2
+  m_Gravity: {x: 0, y: -9.81, z: 0}
+  m_DefaultSolverIterations: 6
+  m_DefaultSolverVelocityIterations: 1
+  m_DefaultContactOffset: 0.01
+  m_DefaultSleepThreshold: 0.005
+  m_DefaultMaxAngularSpeed: 7
