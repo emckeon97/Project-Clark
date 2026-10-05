@@ -1,0 +1,32 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Aa]sset[Ss]tore[Tt]ools/
+
+# Visual Studio / Rider
+*.csproj
+*.sln
+*.user
+*.userprefs
+.vs/
+.idea/
+*.pidb
+*.booproj
+*.svd
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Crash reports
+sysinfo.txt
+
+# Never ignore meta files or the asset drop folders
+!*.meta
