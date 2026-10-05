@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RiverReel.Windows.Views.MenuPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0A0A0C">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="24" Spacing="0" VerticalOptions="Center">
+
+                <Label Text="NOW SHOWING"
+                       FontSize="13" FontAttributes="Bold"
+                       TextColor="#F5EFE0" Opacity="0.75"
+                       HorizontalTextAlignment="Center"
+                       />
+
+                <!-- Marquee chase lights -->
+                <HorizontalStackLayout x:Name="LightsRow"
+                                       Spacing="9"
+                                       HorizontalOptions="Center"
+                                       Margin="0,10,0,10" />
+
+                <Label Text="RIVER REEL"
+                       FontSize="46" FontAttributes="Bold"
+                       FontFamily="Georgia"
+                       TextColor="#F5EFE0"
+                       HorizontalTextAlignment="Center"
+                       />
+
+                <Label Text="A 1930s FLAPPY CARTOON"
+                       FontSize="14" FontAttributes="Bold"
+                       FontFamily="Georgia"
+                       TextColor="#D4A942"
+                       HorizontalTextAlignment="Center"
+                      
+                       Margin="0,8,0,0" />
+
+                <Label Text="CHOOSE YOUR FLYER"
+                       FontSize="12" FontAttributes="Bold"
+                       FontFamily="Georgia"
+                       TextColor="#F5EFE0" Opacity="0.7"
+                       HorizontalTextAlignment="Center"
+                      
+                       Margin="0,18,0,0" />
+
+                <!-- Character picker -->
+                <ScrollView Orientation="Horizontal"
+                            HorizontalScrollBarVisibility="Never"
+                            Margin="0,10,0,0">
+                    <HorizontalStackLayout x:Name="RosterRow" Spacing="12" Padding="8,0" />
+                </ScrollView>
+
+                <Label x:Name="ToonNameLabel"
+                       FontSize="14" FontAttributes="Bold"
+                       FontFamily="Georgia"
+                       TextColor="#F5EFE0" Opacity="0.9"
+                       HorizontalTextAlignment="Center"
+                      
+                       Margin="0,6,0,0" />
+
+                <!-- Best pill -->
+                <Frame CornerRadius="14"
+                       BorderColor="#D4A942"
+                       BackgroundColor="#0A0A0C"
+                       Padding="18,8"
+                       HorizontalOptions="Center"
+                       Margin="0,14,0,0"
+                       HasShadow="False">
+                    <Label x:Name="BestLabel"
+                           FontSize="17" FontAttributes="Bold"
+                           FontFamily="Georgia"
+                           TextColor="#D4A942"
+                           HorizontalTextAlignment="Center" />
+                </Frame>
+
+                <!-- Ticket-stub PLAY button -->
+                <Button x:Name="PlayButton"
+                        Clicked="OnPlayClicked"
+                        BackgroundColor="#D4A942"
+                        TextColor="#0A0A0C"
+                        CornerRadius="10"
+                        Margin="0,16,0,0"
+                        Padding="0,14">
+                    <Button.Content>
+                        <VerticalStackLayout>
+                            <Label Text="★ ADMIT ONE ★"
+                                   FontSize="11" FontAttributes="Bold"
+                                   FontFamily="Georgia"
+                                   TextColor="#0A0A0C"
+                                   HorizontalTextAlignment="Center"
+                                   />
+                            <Label Text="PLAY"
+                                   FontSize="30" FontAttributes="Bold"
+                                   FontFamily="Georgia"
+                                   TextColor="#0A0A0C"
+                                   HorizontalTextAlignment="Center"
+                                   />
+                        </VerticalStackLayout>
+                    </Button.Content>
+                </Button>
+
+                <Label Text="Music: “The Entertainer” by Kevin MacLeod (incompetech.com) · CC BY 4.0"
+                       FontSize="9"
+                       TextColor="#F5EFE0" Opacity="0.35"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,16,0,0" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Mute button -->
+        <Button x:Name="MuteButton"
+                Clicked="OnMuteClicked"
+                FontSize="20"
+                BackgroundColor="#0F0F12"
+                CornerRadius="12"
+                WidthRequest="48" HeightRequest="48"
+                HorizontalOptions="End" VerticalOptions="Start"
+                Margin="0,16,16,0" />
+    </Grid>
+</ContentPage>
