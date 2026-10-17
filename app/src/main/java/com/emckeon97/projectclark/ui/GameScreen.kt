@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import com.emckeon97.projectclark.Prefs
-import com.emckeon97.projectclark.ads.AdManager
 import com.emckeon97.projectclark.characters.rememberSpriteBitmap
 import com.emckeon97.projectclark.game.FlappyCanvas
 import com.emckeon97.projectclark.game.FlappyEngine
@@ -46,7 +45,6 @@ fun GameScreen(navController: NavController) {
             engine = engine,
             sprite = sprite,
             onGameOver = { score ->
-                AdManager.gameOverOccurred(context as? Activity)
                 navController.navigate(Routes.gameOver(score)) {
                     popUpTo(Routes.MENU)
                 }
