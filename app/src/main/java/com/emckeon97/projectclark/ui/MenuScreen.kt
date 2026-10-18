@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
 import com.emckeon97.projectclark.Prefs
+import com.emckeon97.projectclark.ads.AdManager
 import com.emckeon97.projectclark.characters.ROSTER
 import com.emckeon97.projectclark.characters.spriteResFor
 import com.emckeon97.projectclark.game.MusicManager
@@ -57,6 +58,7 @@ fun MenuScreen(navController: NavController) {
     val muted by MusicManager.isMuted.collectAsState()
 
     LaunchedEffect(Unit) {
+        AdManager.loadInterstitial(context)
         MusicManager.play(context)
     }
 
@@ -215,6 +217,10 @@ fun MenuScreen(navController: NavController) {
                     modifier = Modifier.padding(top = 8.dp)
                 )
             }
+            AndroidView(
+                factory = { ctx -> AdManager.bannerView(ctx) },
+                modifier = Modifier.fillMaxWidth()
+            )
         }
         // mute toggle
         Button(
