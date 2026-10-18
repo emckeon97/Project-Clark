@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import com.emckeon97.projectclark.ads.AdManager
 import com.emckeon97.projectclark.game.MusicManager
 import com.emckeon97.projectclark.ui.AppNav
 
@@ -23,6 +24,7 @@ class MainActivity : ComponentActivity() {
                 else -> {}
             }
         })
+        AdManager.initialize(this)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme()) {
                 AppNav()
